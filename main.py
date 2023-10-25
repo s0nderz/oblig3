@@ -1,15 +1,28 @@
-def isLeapYear(year):
-    if year % 4000 == 0:
-        print(str(year) + " is not a leap year")
+import random
+
+year_list = []
+i = 0
+while i < 100:
+    year = random.randrange(0, 10000)
+    year_list.append(year)
+    i += 1
+
+def random_year():
+    for i in year_list:
+        return i
+
+def isLeapYear():
+    if random_year() % 4000 == 0:
+        print(str(random_year()) + " is not a leap year")
         return False
-    elif year % 4 == 0 and year % 100 != 0:
-        print(str(year) + " is a leap year")
+    elif random_year() % 4 == 0 and random_year() % 100 != 0:
+        print(str(random_year()) + " is a leap year")
         return True
-    elif year % 400 == 0:
-        print(str(year) + " is a leap year")
+    elif random_year() % 400 == 0:
+        print(str(random_year()) + " is a leap year")
         return True
     else:
-        print(str(year) + " is not a leap year")
+        print(str(random_year()) + " is not a leap year")
         return False
 
 
