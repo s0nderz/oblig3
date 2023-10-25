@@ -17,7 +17,7 @@ jobs:
       with:
         python-version: "3.12"
     - name: Install dependencies
-      run: pytest install
+      run: pip install pytest
     - name: run tests
       run: pytest -r w
       
